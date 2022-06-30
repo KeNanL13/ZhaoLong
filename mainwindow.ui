@@ -1,0 +1,1707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1491</width>
+    <height>1133</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>zhao'long</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="src.qrc">
+    <normaloff>:/icon/TianXian (2).png</normaloff>:/icon/TianXian (2).png</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QToolButton{background-color: rgba(255, 255, 255, 0);
+}
+QToolButton::hover{	
+    background-color: #718093;
+    border-color: #2f3640;
+    border-radius: 15px;
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidMenu">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>1506</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="tabBarAutoHide">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="tabHome">
+     <attribute name="title">
+      <string>Home</string>
+     </attribute>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QToolButton" name="tBtnNew">
+        <property name="text">
+         <string>New</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/new.png</normaloff>:/icon/new.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QToolButton" name="tBtnOpenModel">
+        <property name="text">
+         <string>Open
+Model</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/a-dakaidewenjianjiamulu.png</normaloff>:/icon/a-dakaidewenjianjiamulu.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QToolButton" name="tBtnSave">
+        <property name="text">
+         <string>Save</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/baocun.png</normaloff>:/icon/baocun.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QToolButton" name="tBtnComponentLibrary">
+        <property name="text">
+         <string>Component
+Library</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/bangzhu.png</normaloff>:/icon/bangzhu.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QToolButton" name="tBtnImport">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 11, 3);</string>
+        </property>
+        <property name="text">
+         <string>Import</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/daochu.png</normaloff>:/icon/daochu.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QToolButton" name="tBtnExport">
+        <property name="text">
+         <string>Export</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/daoru.png</normaloff>:/icon/daoru.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QToolButton" name="tBtn3DView">
+        <property name="text">
+         <string>3D
+View</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/3D.png</normaloff>:/icon/3D.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7">
+       <widget class="QToolButton" name="tBtnSchematic">
+        <property name="text">
+         <string>Schematic</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/circuitboard.png</normaloff>:/icon/circuitboard.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="8">
+       <widget class="QToolButton" name="tBtnNotes">
+        <property name="text">
+         <string>Notes</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/biji.png</normaloff>:/icon/biji.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="9">
+       <widget class="QToolButton" name="tBtnModelUnit">
+        <property name="text">
+         <string>Model
+Unit</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/chizi.png</normaloff>:/icon/chizi.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="10">
+       <widget class="QToolButton" name="tBtnModelExtents">
+        <property name="text">
+         <string>Model
+Extents</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/zuobiao.png</normaloff>:/icon/zuobiao.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="11">
+       <widget class="QToolButton" name="tBtnCreateMesh">
+        <property name="text">
+         <string>Create
+Mesh</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/wangge.png</normaloff>:/icon/wangge.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="12">
+       <widget class="QToolButton" name="tBtnCEMValidate">
+        <property name="text">
+         <string>CEM
+Validate</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/biji2.png</normaloff>:/icon/biji2.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="13">
+       <widget class="QToolButton" name="tBtnScriptEditor">
+        <property name="text">
+         <string>Script
+Editor</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/jiaoben.png</normaloff>:/icon/jiaoben.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="14">
+       <widget class="QToolButton" name="tBtnAppMacro">
+        <property name="text">
+         <string>Application
+Macro</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/yingyong.png</normaloff>:/icon/yingyong.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="15">
+       <widget class="QToolButton" name="tBtnRecordMacro">
+        <property name="text">
+         <string>Record
+Macro</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/jilu.png</normaloff>:/icon/jilu.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="16">
+       <widget class="QToolButton" name="tBtnCables">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 32, 3);</string>
+        </property>
+        <property name="text">
+         <string>Cables</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/chuanshuxian.png</normaloff>:/icon/chuanshuxian.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="17">
+       <widget class="QToolButton" name="tBtnWindscreen">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Windscreen</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/boli2.png</normaloff>:/icon/boli2.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="18">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>2</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tabConstruct">
+     <attribute name="title">
+      <string>Construct</string>
+     </attribute>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="QToolButton" name="tBtnVariable">
+        <property name="text">
+         <string>Variable</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/bianliang.png</normaloff>:/icon/bianliang.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QToolButton" name="tBtnMedia">
+        <property name="text">
+         <string>Media</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/meiti.png</normaloff>:/icon/meiti.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QToolButton" name="tBtnFieldData">
+        <property name="text">
+         <string>Field
+data</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/3dzuobiao.png</normaloff>:/icon/3dzuobiao.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QToolButton" name="tBtnAddPoint">
+        <property name="text">
+         <string>Add
+point</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/dian.png</normaloff>:/icon/dian.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QToolButton" name="tBtnAddWorkplane">
+        <property name="text">
+         <string>Add
+workplane</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/zuobiao2.png</normaloff>:/icon/zuobiao2.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QToolButton" name="tBtnPlanesArrays">
+        <property name="text">
+         <string>Planes
+arrays</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/shuzu.png</normaloff>:/icon/shuzu.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QToolButton" name="tBtnCuboid">
+        <property name="text">
+         <string>Cuboid</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/changfangti.png</normaloff>:/icon/changfangti.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7">
+       <widget class="QToolButton" name="tBtnFlare">
+        <property name="text">
+         <string>Flare</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/R-C.jfif</normaloff>:/icon/R-C.jfif</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="8">
+       <widget class="QToolButton" name="tBtnSphere">
+        <property name="text">
+         <string>Sphere</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/qiuti.png</normaloff>:/icon/qiuti.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="9">
+       <widget class="QToolButton" name="tBtnCylinder">
+        <property name="text">
+         <string>Cylinder</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/yuanzhu.png</normaloff>:/icon/yuanzhu.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="10">
+       <widget class="QToolButton" name="tBtnCone">
+        <property name="text">
+         <string>Cone</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/yuanzui.png</normaloff>:/icon/yuanzui.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="11">
+       <widget class="QToolButton" name="tBtnRectangle">
+        <property name="text">
+         <string>Rectangle</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/zhengfangxing.png</normaloff>:/icon/zhengfangxing.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="12">
+       <widget class="QToolButton" name="tBtnPolygon">
+        <property name="text">
+         <string>Polygon</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/duobianxing.png</normaloff>:/icon/duobianxing.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="13">
+       <widget class="QToolButton" name="tBtnEllipse">
+        <property name="text">
+         <string>Ellipse</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/tuo.png</normaloff>:/icon/tuo.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="14">
+       <widget class="QToolButton" name="tBtnParaboloid">
+        <property name="text">
+         <string>Paraboloid</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/banqiu.png</normaloff>:/icon/banqiu.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="15">
+       <widget class="QToolButton" name="tBtnNurbsSurface">
+        <property name="text">
+         <string>NURBS
+surface</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/qumian.png</normaloff>:/icon/qumian.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="16">
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>132</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tabTransform">
+     <attribute name="title">
+      <string>Transform</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tabSourceLoad">
+     <attribute name="title">
+      <string>Source/Load</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tabRequest">
+     <attribute name="title">
+      <string>Request</string>
+     </attribute>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QToolButton" name="tBtnVariable_2">
+        <property name="text">
+         <string>Standard
+configuration</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/biaozhun.png</normaloff>:/icon/biaozhun.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="tBtnVariable_3">
+        <property name="text">
+         <string>Multiport
+S-parameter</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/s.png</normaloff>:/icon/s.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="tBtnVariable_4">
+        <property name="text">
+         <string>Characteristic
+modes</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/bo.png</normaloff>:/icon/bo.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="tBtnVariable_5">
+        <property name="text">
+         <string>Configuration
+settings</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/peizhi.png</normaloff>:/icon/peizhi.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="tBtnVariable_6">
+        <property name="text">
+         <string>Far
+fields</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/bo3.png</normaloff>:/icon/bo3.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="tBtnVariable_7">
+        <property name="text">
+         <string>Near
+fields</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/bo2.png</normaloff>:/icon/bo2.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="tBtnVariable_9">
+        <property name="text">
+         <string>Error
+estimation</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/e.png</normaloff>:/icon/e.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="tBtnVariable_11">
+        <property name="text">
+         <string>Currents</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/dianliu.png</normaloff>:/icon/dianliu.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="tBtnVariable_10">
+        <property name="text">
+         <string>Transmission/
+Reflection</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/fashe.png</normaloff>:/icon/fashe.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="tBtnVariable_8">
+        <property name="text">
+         <string>Receiving
+antenna</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/tianxian2.png</normaloff>:/icon/tianxian2.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="tBtnVariable_12">
+        <property name="text">
+         <string>SAR</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/tianxian3.png</normaloff>:/icon/tianxian3.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>286</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tabMesh">
+     <attribute name="title">
+      <string>Mesh</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tabSolveRun">
+     <attribute name="title">
+      <string>Solve/Run</string>
+     </attribute>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="0">
+       <widget class="QToolButton" name="tBtnRun">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 29, 0);</string>
+        </property>
+        <property name="text">
+         <string>Run</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/run.png</normaloff>:/icon/run.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>1161</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tabTools">
+     <attribute name="title">
+      <string>Tools</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tabView">
+     <attribute name="title">
+      <string>View</string>
+     </attribute>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QToolButton" name="tBtnViewLeft">
+        <property name="text">
+         <string>左视图</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/Left.png</normaloff>:/icon/Left.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="tBtnViewBack">
+        <property name="text">
+         <string>后视图</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/Back.png</normaloff>:/icon/Back.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="tBtnViewRight">
+        <property name="text">
+         <string>右视图</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/Right.png</normaloff>:/icon/Right.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="tBtnViewTop">
+        <property name="text">
+         <string>顶视图</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/Top.png</normaloff>:/icon/Top.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="tBtnViewBottom">
+        <property name="text">
+         <string>仰视图</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/Button.png</normaloff>:/icon/Button.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="tBtnVIewFront">
+        <property name="text">
+         <string>前视图</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/Front.png</normaloff>:/icon/Front.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="tBtnViewFit">
+        <property name="text">
+         <string>Fit</string>
+        </property>
+        <property name="icon">
+         <iconset resource="src.qrc">
+          <normaloff>:/icon/Fit.png</normaloff>:/icon/Fit.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>48</width>
+          <height>48</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>963</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tabDisplayOptions">
+     <attribute name="title">
+      <string>Display options</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea_4">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>310</y>
+      <width>491</width>
+      <height>212</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>489</width>
+       <height>210</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="2" column="0">
+       <widget class="QPlainTextEdit" name="pTextEditInfo">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea_3">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>160</y>
+      <width>251</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>249</width>
+       <height>109</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="tabPosition">
+         <enum>QTabWidget::North</enum>
+        </property>
+        <property name="tabShape">
+         <enum>QTabWidget::Triangular</enum>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="elideMode">
+         <enum>Qt::ElideNone</enum>
+        </property>
+        <property name="tabsClosable">
+         <bool>true</bool>
+        </property>
+        <property name="tabBarAutoHide">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="tab_Model">
+         <attribute name="title">
+          <string>Tab 1</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="tab_Result">
+         <attribute name="title">
+          <string>Tab 2</string>
+         </attribute>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea_1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>276</width>
+      <height>228</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents_6">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>274</width>
+       <height>226</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widget_1" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="labelConfigs">
+           <property name="text">
+            <string>Configurations</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="tBtnConfigs">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="src.qrc">
+             <normaloff>:/icon/tianjia.png</normaloff>:/icon/tianjia.png</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListView" name="listConfigs">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QTabWidget" name="tabWidConfig">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>390</y>
+      <width>280</width>
+      <height>544</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tabConstruction">
+     <attribute name="title">
+      <string>Construction</string>
+     </attribute>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QScrollArea" name="scrollArea_2_1">
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_5">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>272</width>
+           <height>256</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget_2" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QLabel" name="labelItems">
+               <property name="text">
+                <string>Items</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="tBtnItems">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="src.qrc">
+                 <normaloff>:/icon/tianjia.png</normaloff>:/icon/tianjia.png</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTreeView" name="treeViewItems"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QScrollArea" name="scrollArea_2_2">
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>272</width>
+           <height>256</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget_3" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="labelDetails">
+               <property name="text">
+                <string>Details</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTreeView" name="treeViewDetails"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tabConfiguration">
+     <attribute name="title">
+      <string>Configuration</string>
+     </attribute>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widget_4" native="true">
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="labelConfig">
+           <property name="text">
+            <string>Standard Configuration</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="tBtnConfig1">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="src.qrc">
+             <normaloff>:/icon/shezhi.png</normaloff>:/icon/shezhi.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="tBtnConfig2">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="src.qrc">
+             <normaloff>:/icon/tianjia.png</normaloff>:/icon/tianjia.png</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTreeView" name="treeViewConfig"/>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1491</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="font">
+    <font>
+     <underline>true</underline>
+     <strikeout>false</strikeout>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="src.qrc"/>
+ </resources>
+ <connections/>
+</ui>
