@@ -1,0 +1,66 @@
+DEFINES += OCC_DLL
+
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKBin.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKBinL.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKBinTObj.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKBinXCAF.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKBO.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKBool.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKBRep.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKCAF.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKCDF.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKDCAF.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKDraw.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKernel.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKFeat.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKFillet.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKG2d.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKG3d.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKGeomAlgo.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKGeomBase.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKHLR.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKIGES.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKLCAF.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKMath.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKMesh.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKMeshVS.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKOffset.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKOpenGl.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKOpenGlTest.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKPrim.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKQADraw.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKRWMesh.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKService.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKShHealing.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKStd.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKStdL.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKSTEP.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKSTEP209.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKSTEPAttr.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKSTEPBase.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKSTL.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKTObj.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKTObjDRAW.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKTopAlgo.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKTopTest.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKV3d.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKVCAF.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKViewerTest.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKVRML.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKXCAF.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKXDEDRAW.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKXDEIGES.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKXDESTEP.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKXMesh.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKXml.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKXmlL.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKXmlTObj.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKXmlXCAF.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKXSBase.dll
+LIBS += -LD:/QtWork/FinalOpencascade64/win64/gcc/lib -llibTKXSDRAW.dll
+
+
+
+
+INCLUDEPATH += D:/QtWork/FinalOpencascade64/inc
+DEPENDPATH += D:/QtWork/FinalOpencascade64/inc
