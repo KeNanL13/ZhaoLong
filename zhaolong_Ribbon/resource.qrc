@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>icon/titleIcon.svg</file>
+        <file>themes/dark/main.qss</file>
+        <file>themes/dark/my.qss</file>
+        <file>themes/dark/ribbon.qss</file>
+        <file>icon/Back.png</file>
+        <file>icon/Button.png</file>
+        <file>icon/FitAll.svg</file>
+        <file>icon/Front.png</file>
+        <file>icon/Left.png</file>
+        <file>icon/mesh.svg</file>
+        <file>icon/Right.png</file>
+        <file>icon/Top.png</file>
+        <file>icon/wireframe.svg</file>
+        <file>icon/Fit.png</file>
+        <file>icon/wangge.png</file>
+        <file>icon/chuanshuxian.png</file>
+        <file>icon/axis.svg</file>
+        <file>icon/clear.svg</file>
+        <file>icon/csv.svg</file>
+        <file>icon/excel.svg</file>
+        <file>icon/image.svg</file>
+        <file>icon/Setting.svg</file>
+        <file>icon/Star.svg</file>
+        <file>icon/delete.svg</file>
+        <file>icon/run.svg</file>
+        <file>icon/Setting2.svg</file>
+    </qresource>
+</RCC>

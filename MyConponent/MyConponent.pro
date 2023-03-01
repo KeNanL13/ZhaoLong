@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui svg
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -38,7 +38,12 @@ SOURCES += \
     aboutpage.cpp \
     materialcomponent.cpp \
     combobox.cpp \
-    occview.cpp
+    occview.cpp \
+    myshadowwidget.cpp \
+    customScrollContainer.cpp \
+    customWidgets.cpp \
+    slidepage.cpp \
+    sliderpageexample.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -53,10 +58,16 @@ HEADERS += \
     aboutpage.h \
     materialcomponent.h \
     combobox.h \
-    occview.h
+    occview.h \
+    myshadowwidget.h \
+    customScrollContainer.h \
+    customWidgets.h \
+    slidepage.h \
+    sliderpageexample.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    sliderpageexample.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

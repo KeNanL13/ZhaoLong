@@ -150,6 +150,8 @@ OccView::OccView(QWidget *parent) :
     setFocusPolicy(Qt::StrongFocus);
 
     setMouseTracking(true);
+
+
 }
 
 OccView::~OccView()

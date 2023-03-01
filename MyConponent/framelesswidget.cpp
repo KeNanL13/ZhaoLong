@@ -27,7 +27,7 @@ FrameLessWidget::FrameLessWidget(int cornerRadius, unsigned int attributes, QWid
     windowWidget->show();
     setLayout(stretchLayout);
 
-    //Set style shhet for window widget
+    //Set style sheet for window widget
     QString windowWidgetStyleSheet="QWidget#windowWidget{background-color:"+backgroundColor.name(QColor::HexArgb)+";border-radius:"+QString::number(cornerRadius)+"px;}";
     windowWidget->setStyleSheet(windowWidgetStyleSheet);
     //Set shadow for window widget
@@ -105,13 +105,14 @@ void FrameLessWidget::initialWindowUI()
     //Create a border for window widget(in order to hide zigzagged edges)
     windowBorder=new QWidget(this);
     windowBorder->setObjectName("windowBorder");
-    QString windowBorderStypleSheet=
+    QString windowBorderStyleSheet=
             "QWidget#windowBorder{background-color:#00FFFFFF;border:1.5px solid"+borderColor.name(QColor::HexArgb)+";border-radius:"+QString::number(m_cornerRadius)+"px;}";
-    windowBorder->setStyleSheet(windowBorderStypleSheet);
+    windowBorder->setStyleSheet(windowBorderStyleSheet);
     windowBorder->setAttribute(Qt::WA_TransparentForMouseEvents);
     windowBorder->move(windowWidget->pos()-QPoint(1,1));
     windowBorder->resize(windowWidget->size()+QSize(2,2));
     windowBorder->show();
+//    windowBorder->hide();
 
 
     //Move button widget to the top right of the window widget

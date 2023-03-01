@@ -37,8 +37,8 @@ void RoundedCornerWidget::initializeWidgetUI()
 
     //Create a round cornered mask
     QPainterPath path;
-//    QRect rect(20,20,mainWidget->width()-40,mainWidget->height()-40);
-    path.addRoundedRect(mainWidget->rect(),cornerRadius,cornerRadius);
+//    QRect rect(50,50,mainWidget->width()-100,mainWidget->height()-100);
+    path.addRoundedRect(this->rect(),cornerRadius,cornerRadius);
 
     QRegion region(path.toFillPolygon().toPolygon());
 

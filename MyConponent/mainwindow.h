@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include <roundedcornerwidget.h>
 #include <occview.h>
+#include <QGraphicsOpacityEffect>
+#include <myshadowwidget.h>
+
 
 namespace Ui {
 class MainWindow;
@@ -21,6 +24,12 @@ private:
     Ui::MainWindow *ui;
     OccView *view;
     RoundedCornerWidget * widget2;
+    QGraphicsOpacityEffect * leftOpacity;
+    MyShadowWidget * shadowWidgetLeft;
+    MyShadowWidget * shadowWidgetRight;
+private:
+    void moveIn();
+    void moveOut();
 
     // QWidget interface
 protected:

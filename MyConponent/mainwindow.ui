@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>928</width>
+    <height>622</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
-     <height>23</height>
+     <width>928</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>
@@ -31,12 +31,18 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionResize"/>
+   <addaction name="actionIn"/>
+   <addaction name="actionOut"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="actionResize">
+  <action name="actionIn">
    <property name="text">
-    <string>Resize</string>
+    <string>MoveIn</string>
+   </property>
+  </action>
+  <action name="actionOut">
+   <property name="text">
+    <string>MoveOut</string>
    </property>
   </action>
  </widget>

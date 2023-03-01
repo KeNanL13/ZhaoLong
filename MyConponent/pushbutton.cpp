@@ -665,6 +665,7 @@ void PushButton::setRadius(int radius)
     QString styleSheet =backgroundWidget->styleSheet();
     styleSheet.remove(QRegularExpression("border-radius:\\d+px;"));
     styleSheet.append("border-radius:"+QString::number(radius)+"px;");
+
     //set new style sheet
     backgroundWidget->setStyleSheet(styleSheet);
     this->radius=radius;
