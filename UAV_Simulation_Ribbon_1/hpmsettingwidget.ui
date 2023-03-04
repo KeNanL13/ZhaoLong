@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HPMSettingWidget</class>
+ <widget class="QWidget" name="HPMSettingWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>220</width>
+    <height>387</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget_6" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(6, 126, 255);
+font: 75 9pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_7">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <property name="horizontalSpacing">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QToolButton" name="toolButton">
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>脉冲N：方波</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer_6">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="currentIndex">
+      <number>5</number>
+     </property>
+     <widget class="QWidget" name="page">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget" native="true">
+         <layout class="QGridLayout" name="gridLayout_2">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_0_2"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>系数(b)：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>幅值：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_0_3"/>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEdit_0_4"/>
+          </item>
+          <item row="3" column="0">
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>系数(a)：</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget_2" native="true">
+         <layout class="QGridLayout" name="gridLayout_3">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="lineEdit_1_7"/>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="lineEdit_1_9"/>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="lineEdit_1_8"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_1_2"/>
+          </item>
+          <item row="8" column="1">
+           <widget class="QLineEdit" name="lineEdit_1_10"/>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="label_18">
+            <property name="text">
+             <string>系数(w3)：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_1_3"/>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_15">
+            <property name="text">
+             <string>系数(w2)：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_13">
+            <property name="text">
+             <string>幅值E2：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>系数(t3)：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_14">
+            <property name="text">
+             <string>系数(t2)：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_12">
+            <property name="text">
+             <string>系数(t1)：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <spacer name="verticalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="lineEdit_1_6"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>系数(w1)：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEdit_1_4"/>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="label_16">
+            <property name="text">
+             <string>幅值E3：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="lineEdit_1_5"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>幅值E1：</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_3">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget_3" native="true">
+         <layout class="QGridLayout" name="gridLayout_4">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_24">
+            <property name="text">
+             <string>期望(b)：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <spacer name="verticalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_19">
+            <property name="text">
+             <string>幅值：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEdit_2_4"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_2_2"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_2_3"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_22">
+            <property name="text">
+             <string>方差(σ)：</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_4">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget_4" native="true">
+         <layout class="QGridLayout" name="gridLayout_5">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_3_2"/>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEdit_3_4"/>
+          </item>
+          <item row="3" column="0">
+           <spacer name="verticalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_3_3"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_25">
+            <property name="text">
+             <string>幅值：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_28">
+            <property name="text">
+             <string>周期（ms）：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_30">
+            <property name="text">
+             <string>高电平：</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_6">
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_26">
+         <property name="text">
+          <string>幅值：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEdit_5_1"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEdit_5_2"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_33">
+         <property name="text">
+          <string>频率（f）：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <spacer name="verticalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>280</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_5">
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget_5" native="true">
+         <layout class="QGridLayout" name="gridLayout_6">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_4_1"/>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="lineEdit_4_6"/>
+          </item>
+          <item row="4" column="0">
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_32">
+            <property name="text">
+             <string>场强：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_4_3"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_36">
+            <property name="text">
+             <string>上升沿：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEdit_4_5"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_37">
+            <property name="text">
+             <string>脉冲宽度：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_34">
+            <property name="text">
+             <string>下降沿：</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

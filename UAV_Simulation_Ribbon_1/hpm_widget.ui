@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HPM_Widget</class>
+ <widget class="QWidget" name="HPM_Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>825</width>
+    <height>596</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>70</y>
+     <width>181</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+  </widget>
+  <widget class="QScrollArea" name="scrollArea">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>331</width>
+     <height>360</height>
+    </rect>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollAreaWidgetContents">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>329</width>
+      <height>358</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="currentIndex">
+        <number>6</number>
+       </property>
+       <widget class="QWidget" name="page">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,0,0,0,0">
+         <property name="leftMargin">
+          <number>11</number>
+         </property>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_1_K">
+           <property name="text">
+            <string>幅值：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="3">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>波形参数设置：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="3">
+          <widget class="QToolButton" name="toolButton">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/Resouce/pictures/doublePluse.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>i</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <widget class="QLabel" name="label_1_b">
+           <property name="text">
+            <string>参数（b）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_1_a">
+           <property name="text">
+            <string>参数（a）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="lineEdit_1_1"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLineEdit" name="lineEdit_1_2"/>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLineEdit" name="lineEdit_1_3"/>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLabel" name="label_29">
+           <property name="text">
+            <string>kV</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QLabel" name="label_30">
+           <property name="text">
+            <string>1/ns</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3">
+          <widget class="QLabel" name="label_31">
+           <property name="text">
+            <string>1/ns</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_2">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <property name="leftMargin">
+          <number>11</number>
+         </property>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>参数（a2）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1" colspan="2">
+          <widget class="QLineEdit" name="lineEdit_2_5"/>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>参数（w2）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="12" column="1" colspan="2">
+          <widget class="QLineEdit" name="lineEdit_2_12"/>
+         </item>
+         <item row="1" column="1" colspan="2">
+          <widget class="QLineEdit" name="lineEdit_2_1"/>
+         </item>
+         <item row="10" column="1" colspan="2">
+          <widget class="QLineEdit" name="lineEdit_2_10"/>
+         </item>
+         <item row="0" column="2">
+          <widget class="QToolButton" name="toolButton_2">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/Resouce/pictures/doublePluse.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>i</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1" colspan="2">
+          <widget class="QLineEdit" name="lineEdit_2_2"/>
+         </item>
+         <item row="8" column="0">
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>参数（t2）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="0">
+          <widget class="QLabel" name="label_12">
+           <property name="text">
+            <string>参数（b3）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>参数（b1）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>参数（t1）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1" colspan="2">
+          <widget class="QLineEdit" name="lineEdit_2_3"/>
+         </item>
+         <item row="11" column="0">
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>参数（w3）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>参数（a1）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="2">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>波形参数设置：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="12" column="0">
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>参数（t3）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>参数（w1）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1" colspan="2">
+          <widget class="QLineEdit" name="lineEdit_2_4"/>
+         </item>
+         <item row="6" column="1" colspan="2">
+          <widget class="QLineEdit" name="lineEdit_2_6"/>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>参数（b2）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="1" colspan="2">
+          <widget class="QLineEdit" name="lineEdit_2_8"/>
+         </item>
+         <item row="7" column="1" colspan="2">
+          <widget class="QLineEdit" name="lineEdit_2_7"/>
+         </item>
+         <item row="9" column="1" colspan="2">
+          <widget class="QLineEdit" name="lineEdit_2_9"/>
+         </item>
+         <item row="11" column="1" colspan="2">
+          <widget class="QLineEdit" name="lineEdit_2_11"/>
+         </item>
+         <item row="9" column="0">
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>参数（a3）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="13" column="1">
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_3">
+        <layout class="QGridLayout" name="gridLayout_5">
+         <property name="leftMargin">
+          <number>11</number>
+         </property>
+         <item row="3" column="0" colspan="2">
+          <widget class="QLabel" name="label_1_E_5">
+           <property name="text">
+            <string>方差（σ）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QToolButton" name="toolButton_3">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/Resouce/pictures/doublePluse.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>i</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QLabel" name="label_1_K_8">
+           <property name="text">
+            <string>幅值（A）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="3">
+          <widget class="QLabel" name="label_15">
+           <property name="text">
+            <string>波形参数设置：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_1_K_9">
+           <property name="text">
+            <string>期望（b）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="lineEdit_3_1"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLineEdit" name="lineEdit_3_2"/>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLineEdit" name="lineEdit_3_3"/>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLabel" name="label_32">
+           <property name="text">
+            <string>kV</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QLabel" name="label_33">
+           <property name="text">
+            <string>ns</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3">
+          <widget class="QLabel" name="label_34">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_4">
+        <layout class="QGridLayout" name="gridLayout_6">
+         <property name="leftMargin">
+          <number>11</number>
+         </property>
+         <item row="0" column="2">
+          <widget class="QToolButton" name="toolButton_4">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/Resouce/pictures/doublePluse.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>i</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_21">
+           <property name="text">
+            <string>幅值：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_19">
+           <property name="text">
+            <string>高电平时间：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="2">
+          <widget class="QLabel" name="label_16">
+           <property name="text">
+            <string>波形参数设置：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_20">
+           <property name="text">
+            <string>周期：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <spacer name="verticalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_4_1"/>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEdit_4_2"/>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="lineEdit_4_3"/>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="label_35">
+           <property name="text">
+            <string>ns</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLabel" name="label_36">
+           <property name="text">
+            <string>ns</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLabel" name="label_37">
+           <property name="text">
+            <string>kV</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_7">
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0" colspan="2">
+          <widget class="QLabel" name="label_46">
+           <property name="text">
+            <string>波形参数设置：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QToolButton" name="toolButton_7">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/Resouce/pictures/doublePluse.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>i</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_44">
+           <property name="text">
+            <string>幅值：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_7_1"/>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="label_48">
+           <property name="text">
+            <string>kV</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_45">
+           <property name="text">
+            <string>频率（f）：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEdit_7_2"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLabel" name="label_47">
+           <property name="text">
+            <string>GHz</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <spacer name="verticalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>277</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_5">
+        <layout class="QGridLayout" name="gridLayout_7">
+         <property name="leftMargin">
+          <number>11</number>
+         </property>
+         <item row="4" column="3">
+          <widget class="QLabel" name="label_41">
+           <property name="text">
+            <string>ns</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLineEdit" name="lineEdit_5_2"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_26">
+           <property name="text">
+            <string>场强：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLineEdit" name="lineEdit_5_4"/>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLabel" name="label_38">
+           <property name="text">
+            <string>kV</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3">
+          <widget class="QLabel" name="label_40">
+           <property name="text">
+            <string>ns</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QToolButton" name="toolButton_5">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/Resouce/pictures/doublePluse.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>i</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="2">
+          <spacer name="verticalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="4" column="0" colspan="2">
+          <widget class="QLabel" name="label_22">
+           <property name="text">
+            <string>下降沿：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <widget class="QLabel" name="label_27">
+           <property name="text">
+            <string>上升沿：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLineEdit" name="lineEdit_5_3"/>
+         </item>
+         <item row="0" column="0" colspan="3">
+          <widget class="QLabel" name="label_17">
+           <property name="text">
+            <string>波形参数设置：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <widget class="QLabel" name="label_24">
+           <property name="text">
+            <string>脉冲宽度：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QLabel" name="label_39">
+           <property name="text">
+            <string>ns</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="lineEdit_5_1"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_6">
+        <layout class="QGridLayout" name="gridLayout_8">
+         <property name="leftMargin">
+          <number>11</number>
+         </property>
+         <property name="topMargin">
+          <number>11</number>
+         </property>
+         <property name="spacing">
+          <number>6</number>
+         </property>
+         <item row="1" column="2">
+          <widget class="QPushButton" name="pushButton_newPluse">
+           <property name="styleSheet">
+            <string notr="true">
+background-color: transparent</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="res.qrc">
+             <normaloff>:/Resouce/icons/new.svg</normaloff>:/Resouce/icons/new.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_28">
+           <property name="text">
+            <string>脉冲类型：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="comboBox">
+           <item>
+            <property name="text">
+             <string>双指数脉冲</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>三指数脉冲</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>高斯脉冲</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>方波脉冲</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>正弦波</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>自定义脉冲</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="4">
+          <widget class="QLabel" name="label_18">
+           <property name="text">
+            <string>波形参数设置：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4">
+          <widget class="QToolButton" name="toolButton_6">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/Resouce/pictures/doublePluse.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>i</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3" colspan="2">
+          <widget class="QPushButton" name="pushButton_clearPluse">
+           <property name="styleSheet">
+            <string notr="true">background-color: transparent</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="res.qrc">
+             <normaloff>:/Resouce/icons/clearAll.svg</normaloff>:/Resouce/icons/clearAll.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="6">
+          <widget class="QWidget" name="widget_combination" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <spacer name="verticalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

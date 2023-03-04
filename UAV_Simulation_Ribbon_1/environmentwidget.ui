@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EnvironmentWidget</class>
+ <widget class="QWidget" name="EnvironmentWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>795</width>
+    <height>547</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>90</y>
+     <width>191</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+  </widget>
+  <widget class="QScrollArea" name="scrollArea">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>237</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollAreaWidgetContents">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>235</width>
+      <height>389</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+        </font>
+       </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <widget class="QWidget" name="page">
+        <layout class="QGridLayout" name="gridLayout">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>11</number>
+         </property>
+         <property name="rightMargin">
+          <number>11</number>
+         </property>
+         <property name="bottomMargin">
+          <number>11</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>7</number>
+         </property>
+         <item row="5" column="0" colspan="2">
+          <widget class="QLabel" name="label_22">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>横摆角(yaw):</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0" colspan="2">
+          <widget class="QLabel" name="label_21">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>俯仰角（pitch）:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="2">
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border : 0px
+</string>
+           </property>
+           <property name="text">
+            <string>姿态角设置（固定）</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="lineEdit_Roll"/>
+         </item>
+         <item row="7" column="1">
+          <widget class="QLineEdit" name="lineEdit_Yaw_k"/>
+         </item>
+         <item row="11" column="1">
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="10" column="1">
+          <widget class="QLineEdit" name="lineEdit_Pitch_k"/>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLineEdit" name="lineEdit_Yaw"/>
+         </item>
+         <item row="10" column="0">
+          <widget class="QLabel" name="label_hide3">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>线性系数：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="0">
+          <widget class="QLabel" name="label_25">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>初始值：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_hide2">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>线性系数：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <widget class="QLabel" name="label_20">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>翻滚角（roll）:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_24">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>初始值：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <spacer name="verticalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="9" column="1">
+          <widget class="QLineEdit" name="lineEdit_Pitch"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_23">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>初始值：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="lineEdit_Roll_k"/>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_hide1">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>线性系数：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLabel" name="label_2">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>degree</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLabel" name="label_3">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>degree/h</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="2">
+          <widget class="QLabel" name="label_4">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>degree</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="2">
+          <widget class="QLabel" name="label_17">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>degree/h</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="2">
+          <widget class="QLabel" name="label_26">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>degree</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="2">
+          <widget class="QLabel" name="label_27">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>degree/h</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_2">
+        <layout class="QGridLayout" name="gridLayout_3">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <item row="3" column="2">
+          <widget class="QLineEdit" name="lineEdit_UAVPosition"/>
+         </item>
+         <item row="2" column="3">
+          <widget class="QLabel" name="label_28">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>km/h</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="3">
+          <widget class="QLabel" name="label_5">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>无人机参数设置</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLineEdit" name="lineEdit_Velocity"/>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <widget class="QLabel" name="label_7">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>初始位置：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
+          <widget class="QComboBox" name="comboBox_3">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <item>
+            <property name="text">
+             <string>旋翼</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>扑翼</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>固定翼</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_9">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>类型：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" colspan="2">
+          <widget class="QLabel" name="label_8">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>天线增益：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <widget class="QLabel" name="label_6">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>速率：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <spacer name="verticalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLineEdit" name="lineEdit_UAVGain"/>
+         </item>
+         <item row="6" column="2">
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="4" column="3">
+          <widget class="QLabel" name="label_29">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>dB</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3">
+          <widget class="QLabel" name="label_30">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>(x,y,z)(m)</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_3">
+        <layout class="QGridLayout" name="gridLayout_4">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_12">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>初始位置：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_14">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>波束宽度：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="lineEdit_InterFrequency"/>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEdit_InterPosition"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_11">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>发射频率：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_19">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>极化角度：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="1">
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="7" column="1">
+          <widget class="QLineEdit" name="lineEdit_InterPolarization"/>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLineEdit" name="lineEdit_InterDirection"/>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="lineEdit_InterPower"/>
+         </item>
+         <item row="1" column="0">
+          <spacer name="verticalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLineEdit" name="lineEdit_InterGain"/>
+         </item>
+         <item row="0" column="0" colspan="2">
+          <widget class="QLabel" name="label_10">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>干扰源设置</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_18">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>入射角度：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_13">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>辐射功率：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLabel" name="label_31">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>(x,y,z,)(m)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLabel" name="label_32">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>Hz</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLabel" name="label_33">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>W</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
+          <widget class="QLabel" name="label_34">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>ns</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="2">
+          <widget class="QLabel" name="label_35">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>degree</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="2">
+          <widget class="QLabel" name="label_36">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>degree</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_4">
+        <layout class="QGridLayout" name="gridLayout_5">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>地理环境：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="2">
+          <widget class="QLabel" name="label_15">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>环境设置</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_16">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>天气：</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <spacer name="verticalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="1">
+          <widget class="QComboBox" name="comboBox">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <item>
+            <property name="text">
+             <string>晴天</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>小雨</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>中雨</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>大雨</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QComboBox" name="comboBox_2">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+            </font>
+           </property>
+           <item>
+            <property name="text">
+             <string>近海面</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>陆地</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <spacer name="verticalSpacer_8">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
