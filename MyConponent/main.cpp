@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
     f.setPixelSize(13);
     a.setFont(f);
 
-    SliderPageExample w;
+    CombinationWidget w;
     w.show();
 
     return a.exec();

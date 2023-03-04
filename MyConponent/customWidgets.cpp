@@ -643,6 +643,7 @@ void textInputItem::enterEditEffect(){
     fade->setDuration(150);
     QPropertyAnimation *move = new QPropertyAnimation(editor, "geometry", this);
     move->setStartValue(editor->geometry());
+
     move->setEndValue(QRectF(this->width() * 0.3, this->height() / 2 - editor->height() / 2 - 2, this->width() * 0.7 - margin, editor->height()));
     move->setDuration(500);
     move->setEasingCurve(QEasingCurve::InOutExpo);
