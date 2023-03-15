@@ -5,6 +5,10 @@
 #include <QTimer>
 #include <qtmaterialtextfield.h>
 #include <QColorDialog>
+#include <QMetaType>
+#include <qtmaterialcircularprogress.h>
+#include <QGraphicsOpacityEffect>
+#include <QGraphicsDropShadowEffect>
 
 MainWindow::MainWindow(QWidget *parent) :
     SARibbonMainWindow(parent)
@@ -15,15 +19,17 @@ MainWindow::MainWindow(QWidget *parent) :
     helper->setRubberBandOnResize(false);
     this->setWindowIcon(QIcon(":/res/icon/titleIcon.svg"));
     this->ribbonBar()->setWindowTitleTextColor(QColor(255,255,255));
-//    this->ribbonBar()->setRibbonStyle(SARibbonBar::OfficeStyleTwoRow);
+    //    this->ribbonBar()->setRibbonStyle(SARibbonBar::OfficeStyleTwoRow);
     this->ribbonBar()->setContentsMargins(0, 0, 0, 0);
-    this->resize(800,600);
+
+    this->resize(1200,800);
     this->setMinimumWidth(500);
-//    this->ribbonBar()->applicationButton()->setVisible(false);
+    //    this->ribbonBar()->applicationButton()->setVisible(false);
     this->setWindowTitle("线缆仿真软件");
     this->ribbonBar()->setFont(QFont("微软雅黑",13));
     //加载主题
-    QString themePath=QDir::currentPath()+QDir::separator()+"my.qss";
+    QString themePath=QApplication::applicationDirPath()+"/Theme/dark/my.qss";
+
     this->loadTheme(themePath);
     //总标签页
     SARibbonCategory*categoryMain=this->ribbonBar()->addCategoryPage(tr("主页"));
@@ -49,11 +55,11 @@ MainWindow::MainWindow(QWidget *parent) :
     SARibbonGallery* galleryCable=pannelMain2->addGallery();
     QList<QAction*> ActionList;
     QAction * action1=new QAction("平行线");
-    action1->setIcon(QIcon(":/Resouce/icons/doubleExp.png"));
+    action1->setIcon(QIcon(":/res/icon/Control Cable.svg"));
     QAction * action2=new QAction("双绞线");
-    action2->setIcon(QIcon(":/Resouce/icons/TriExp.png"));
+    action2->setIcon(QIcon(":/res/icon/Control Cable.svg"));
     QAction * action3=new QAction("高速线");
-    action3->setIcon(QIcon(":/Resouce/icons/Gauss.png"));
+    action3->setIcon(QIcon(":/res/icon/Control Cable.svg"));
 
     ActionList<<action1<<action2<<action3;
     cableGroup=galleryCable->addCategoryActions("线缆类型",ActionList);
@@ -87,17 +93,17 @@ MainWindow::MainWindow(QWidget *parent) :
     SARibbonPannel * pannelResult3=categoryResult->addPannel("列表操作");
     this->pannelAddLargeAction(pannelResult3,"删除",":/res/icon/delete.svg");
     this->pannelAddLargeAction(pannelResult3,"导入CSV数据",":/res/icon/csv.svg");
-    this->pannelAddLargeAction(pannelResult3,"修改名称","");
-    this->pannelAddLargeAction(pannelResult3,"修改颜色","");
+    this->pannelAddLargeAction(pannelResult3,"修改名称",":/res/icon/rename-box.svg");
+    this->pannelAddLargeAction(pannelResult3,"修改颜色",":/res/icon/color.svg");
     //标签4 历史记录
     SARibbonPannel * pannelRecord1=categoryRecord->addPannel("设置");
     this->pannelAddLargeAction(pannelRecord1,"清空记录",":/res/icon/clear.svg");
 
-//    设置主界面
+    //    设置主界面
     stackWidget=new QStackedWidget();
 
     this->setCentralWidget(stackWidget);
-    mainWidget=new contentWidget();
+    mainWidget=new NewContentWidget();
     stackWidget->addWidget(mainWidget);
 
     tableWidget=new recordWidget;
@@ -120,9 +126,9 @@ MainWindow::MainWindow(QWidget *parent) :
         });
     }
     //记录界面点击运行
-    connect(tableWidget,&recordWidget::recordRun,this,&MainWindow::onRecordRun);
+//    connect(tableWidget,&recordWidget::recordRun,this,&MainWindow::onRecordRun);/**********fix*******/
     //设置默认线缆
-//    this->onActionCableGroupTrigger(action3);
+    //    this->onActionCableGroupTrigger(action3);
     //设置结果窗口Action功能
     connect(contextcategory->categoryPage(0)->pannelByIndex(0)->actions()[0],&QAction::triggered,result,&ChartWidget::saveGraph);
     connect(contextcategory->categoryPage(0)->pannelByIndex(0)->actions()[1],&QAction::triggered,result,&ChartWidget::saveExcel);
@@ -157,11 +163,41 @@ MainWindow::MainWindow(QWidget *parent) :
 
     });
     connect(this,&MainWindow::setProjectNameSig,result,&ChartWidget::setItemName);
-
+    //初始化命名对话框
     this->ProjectNameDialogSetup();
-    QTimer::singleShot(100,this,[=](){
-        mainWidget->getView()->MustBeResized();
+
+
+
+    //初始化线缆求解器和对应线程
+    solverThread=new QThread();
+    solver_cable=new Solver_Cable();
+    solver_cable->moveToThread(solverThread);
+
+    //多线程资源管理
+    connect(solverThread,&QThread::started,solver_cable,&Solver_Cable::init);
+    connect(solverThread,&QThread::finished,solver_cable,&Solver_Cable::deleteLater);
+    connect(solverThread,&QThread::finished,solverThread,&QThread::deleteLater);
+    connect(solverThread,&QThread::destroyed,this,[=](){
+        solverThread=nullptr;
     });
+    connect(solver_cable,&Solver_Cable::destroyed,this,[=](){
+        solver_cable=nullptr;
+    });
+    //连接相关任务
+    qRegisterMetaType<QVector<double>>("QVector<double>");
+    qRegisterMetaType<QVector<QString>>("QVector<QString>");
+    connect(this,&MainWindow::highSpeedSignal,solver_cable,&Solver_Cable::solver_HighSpeedCable);
+    connect(solver_cable,&Solver_Cable::caculateDone,this,&MainWindow::dealWithResults);
+
+
+    solverThread->start();
+    //传输信息到数据库
+    connect(mainWidget,&NewContentWidget::transInfo,tableWidget,&recordWidget::insert);
+    //接受数据库信号并运行数据
+    connect(tableWidget,&recordWidget::recordRun,this,&MainWindow::onRecordRun);
+
+
+
 }
 
 MainWindow::~MainWindow()
@@ -195,113 +231,112 @@ void MainWindow::pannelAddLargeAction(SARibbonPannel *panel, QString actionName,
 void MainWindow::onActionCableGroupTrigger(QAction *action)
 {
     int index=cableGroup->getActionGroup()->actions().indexOf(action);
-
-    mainWidget->changeCablePage(index);
-
-    if(index==currentIndex)
-    {
-        return;
+    SettingWidget_Base::CableType type=SettingWidget_Base::None;
+    switch (index) {
+    case 0:type=SettingWidget_Base::SingleCable;break;
+    case 1:type=SettingWidget_Base::TwistCable;break;
+    case 2:type=SettingWidget_Base::HighSpeedCable;break;
+    default:
+        type=SettingWidget_Base::None;
+        break;
     }
-    else{
-        if(cable!=nullptr)
-        {
-            delete cable;
-            cable=nullptr;
-        }
-        switch (index) {
-        case 0:
-            break;
-        case 1:
-            break;
-        case 2:
-            cable=new HighSpeedCable;
-            connect(cable,&Cable::loadInData,tableWidget,&recordWidget::insert);
-            break;
-        default:
-            break;
-        }
-        connect(cable,&Cable::caculateDone,this,&MainWindow::dealWithResults);
-        currentIndex=index;
-    }
+
+    mainWidget->showToolWidget(type);
+    currentIndex=index;
+
 }
 
 void MainWindow::onActionRun()
 {
-    if(cable==nullptr)
+    if(!mainWidget->isInputComplete() || runningFlag)
     {
+        QMessageBox::warning(this,"警告","请输入完整的参数");
         return;
     }
+
+    if(runningDialog==nullptr)
+    {
+        runningDialogSetup();
+    }
+    //开始运行
+    runningFlag=true;
+    //进入加载界面
+    stackWidget->addWidget(result);
+    this->ribbonBar()->showContextCategory(contextcategory);
+    ribbonBar()->setCurrentIndex(3);
+    runningDialog->showDialog();
+    //数据处理
+    QVector<double> data_num;
+    QVector<QString>data_text;
+
+
+    data_num=mainWidget->getInputParameter_Num();
+    data_text=mainWidget->getInputParameter_Text();
+
+    if(data_text.size()==0)
+    {
+        return ;
+    }
+    qDebug()<<currentIndex;
     if(currentIndex==2)
     {
-        QString name;
-        name=QFileDialog::getSaveFileName(this,"保存线缆S参数文件",".s4p","S_Parameters (*.s4p)");
-        name=name.section(".s4p",0,0);
-        cable->setName(name);
-        HighSpeedCable * c=dynamic_cast<HighSpeedCable*>(cable);
-        if(c!=nullptr)
+        QString s4pPath;
+        if(isDirExist(QString(QApplication::applicationDirPath()+"/S4P_File")))
         {
-            c->setIsFixture(mainWidget->getFixtureCheckBox()->isChecked());
-            c->setType(mainWidget->getHighSpeedType());
-            if(mainWidget->getFixtureCheckBox()->isChecked())
+            s4pPath=QString(QApplication::applicationDirPath()+"/S4P_File/"+data_text[0]+".s4p");
+            while(isFileExist(s4pPath))
             {
-                if(mainWidget->getLineEditPath()->text().isNull()||mainWidget->getLineEditPath()->text().isEmpty())
-                {
-                 QMessageBox::warning(this,"错误提示","未输入夹具路径");
-                 return;
-                }
-                c->setFixturePath(mainWidget->getLineEditPath()->text());
+                s4pPath=s4pPath.split(".")[0]+"(1)"+".s4p";
             }
+            s4pPath=s4pPath.split(".")[0];
+            data_text.insert(1,s4pPath);
         }
+    }
+    qDebug()<<data_num;
+    qDebug()<<data_text;
 
+    switch (currentIndex) {
+    case 0:
+        break;
+    case 1:
+        break;
+    case 2:
 
+        emit highSpeedSignal(data_num,data_text);
+        break;
+    default:
+        break;
     }
 
-    cable->setParameters(mainWidget->getInputParameters(currentIndex));
-    cable->CaculateS_Parameters();
+    //发送参数信号
+    mainWidget->sendInputMessage();
 
+
+
+
+
+
+    runningFlag=false;
 }
-
-//void MainWindow::dealWithResults(QVector<QVector<double> >data, QVector<QString>name)
-//{
-//    if(result!=nullptr)
-//    {
-//        delete result;
-//        result=nullptr;
-//    }
-//    qDebug()<<"计算完成";
-//    result=new ChartWidget(data,name);
-//    connect(contextcategory->categoryPage(0)->pannelByIndex(0)->actions()[0],&QAction::triggered,result,&ChartWidget::saveGraph);
-//    connect(contextcategory->categoryPage(0)->pannelByIndex(0)->actions()[1],&QAction::triggered,result,&ChartWidget::saveExcel);
-//    connect(contextcategory->categoryPage(0)->pannelByIndex(1)->actions()[0],&QAction::triggered,this,[=](){
-//        result->changeX(true);
-//    });
-//    connect(contextcategory->categoryPage(0)->pannelByIndex(1)->actions()[1],&QAction::triggered,this,[=](){
-//        result->changeX(false);
-//    });
-//    stackWidget->addWidget(result);
-//    stackWidget->setCurrentIndex(2);
-//    this->ribbonBar()->showContextCategory(contextcategory);
-//    this->ribbonBar()->setCurrentIndex(3);
-//}
 
 void MainWindow::dealWithResults(QVector<QVector<double> > datas, QVector<QString> names, QString title)
 {
     if(result==nullptr)return;
 
     result->addItem(datas,names,title);
-    stackWidget->addWidget(result);
-    stackWidget->setCurrentIndex(2);
-    this->ribbonBar()->showContextCategory(contextcategory);
-    this->ribbonBar()->setCurrentIndex(3);
+//    stackWidget->addWidget(result);
+////    stackWidget->setCurrentIndex(2);
+//    this->ribbonBar()->showContextCategory(contextcategory);
+//    this->ribbonBar()->setCurrentIndex(3);
 }
 
 void MainWindow::OnRibbonTabChanged(int index){
     switch (index) {
     case 0:stackWidget->setCurrentIndex(0);
-        mainWidget->getView()->MustBeResized();
+        mainWidget->occResize();
         break;
     case 1:stackWidget->setCurrentIndex(0);
-        mainWidget->getView()->MustBeResized();
+        mainWidget->occResize();
         break;
     case 2:stackWidget->setCurrentIndex(1);
         break;
@@ -311,75 +346,66 @@ void MainWindow::OnRibbonTabChanged(int index){
     }
 }
 
-void MainWindow::onRecordRun(int type, QStringList parameters)
+void MainWindow::onRecordRun(int type, QStringList valueList)
 {
-    if(cable!=nullptr)
+    //进入加载页面
+    if(runningDialog==nullptr)
     {
-        delete cable;
-        cable=nullptr;
+        runningDialogSetup();
+    }
+    stackWidget->addWidget(result);
+    this->ribbonBar()->showContextCategory(contextcategory);
+    ribbonBar()->setCurrentIndex(3);
+    runningDialog->showDialog();
+
+    QVector<double>dataNum;
+    QVector<QString>dataText;
+    dataText.push_back(valueList[1]);
+    valueList.removeFirst();
+    valueList.removeFirst();
+
+    //针对高速线缆修改夹具路径和。s4p路径
+    if(type==2)
+    {
+        QString s4pPath;
+        if(isDirExist(QString(QApplication::applicationDirPath()+"/S4P_File")))
+        {
+            s4pPath=QString(QApplication::applicationDirPath()+"/S4P_File/"+dataText[0]+".s4p");
+            while(isFileExist(s4pPath))
+            {
+                s4pPath=s4pPath.split(".")[0]+"(1)"+".s4p";
+            }
+            s4pPath=s4pPath.split(".")[0];
+            dataText.push_back(s4pPath);
+        }
+
+    if(!this->isFileExist(QDir::currentPath()+"/Fixture/"+valueList.last()))
+    {
+        QMessageBox::warning(tableWidget,"警告","夹具位置不存在！");
+        return;
+    }
+    dataText.push_back(QDir::currentPath()+"/"+valueList.last());
+    valueList.removeLast();
+    }
+    for(auto x :valueList)
+    {
+        dataNum.push_back(x.toDouble());
     }
 
-    QVector<double>paramterList;
+
+
+    //根据类型发送对应信号
     switch (type) {
-    case 2:cable=new HighSpeedCable();
+    case 0:
         break;
     case 1:
         break;
-    case 0:
+    case 2:
+
+        emit highSpeedSignal(dataNum,dataText);
         break;
     default:
         break;
-    }
-    connect(cable,&Cable::caculateDone,this,&MainWindow::dealWithResults);
-
-    if(type==2)
-    {
-        QString name;
-        bool isFixture;
-        QString fixturePath;
-        name="temp";
-        cable->setName(name);
-        HighSpeedCable * c=dynamic_cast<HighSpeedCable*>(cable);
-
-        for(int i=0;i<parameters.size()-1;i++)
-        {
-            paramterList.push_back(parameters[i].toDouble());
-        }
-        if(parameters[parameters.size()-1].isNull()||parameters[parameters.size()-1].isEmpty())
-        {
-           isFixture=false;
-        }
-        else{
-            isFixture=true;
-            fixturePath=parameters[parameters.size()-1];
-        }
-        if(c!=nullptr)
-        {
-            c->setIsFixture(isFixture);
-            if(isFixture)
-            {
-                c->setFixturePath(fixturePath);
-            }
-        }
-    }
-    cable->setParameters(paramterList);
-    cable->CaculateS_Parameters();
-    if(type==currentIndex)
-    {
-        return;
-    }
-    else{
-        switch (currentIndex) {
-        case 2:cable=new HighSpeedCable();
-            break;
-        case 1:
-            break;
-        case 0:
-            break;
-        default:
-            break;
-        }
-        connect(cable,&Cable::caculateDone,this,&MainWindow::dealWithResults);
     }
 }
 
@@ -391,7 +417,7 @@ void MainWindow::ProjectNameDialogSetup()
         dialog=nullptr;
     }
     dialog=new QtMaterialDialog;
-//    dialog->setParent(this);
+    //    dialog->setParent(this);
     dialog->setParent(result);
     QWidget *widget=new QWidget();
     QHBoxLayout *layout=new QHBoxLayout;
@@ -420,6 +446,122 @@ void MainWindow::ProjectNameDialogSetup()
         }
         textLine->clear();
     });
+}
+
+void MainWindow::runningDialogSetup()
+{
+    qDebug()<<"createRunningDialog";
+    runningDialog=new QtMaterialDialog(result);
+
+    QVBoxLayout * runningDialogLayout=new QVBoxLayout();
+    QtMaterialCircularProgress * progress=new QtMaterialCircularProgress();
+    progress->setSize(80);
+
+    QLabel * tipLabel=new QLabel("Tips:Waiting for the result.");
+    tipLabel->setFont(QFont("DengXian",12,QFont::Normal));
+
+    QWidget* finishWidget=new QWidget;
+    QHBoxLayout * layout=new QHBoxLayout;
+    layout->setContentsMargins(0,0,0,0);
+    layout->addStretch();
+
+    QLabel * finishLabel=new QLabel;
+    finishLabel->setPixmap(QPixmap(":/res/icon/finish.svg"));
+
+    layout->addWidget(finishLabel);
+    layout->addStretch();
+    finishWidget->setLayout(layout);
+    finishLabel->setFont(QFont("Font Awesome 6 Free Solid",14));
+//    finishLabel->setText("\uf058");
+//    QPalette red;
+//    red.setColor(QPalette::WindowText,Qt::green);
+//    finishLabel->setPalette(red);
+
+//    finishLabel->hide();
+    finishLabel->setAlignment(Qt::AlignCenter);
+//    finishLabel->setFixedSize(80,80);
+
+    QWidget * buttonWidget=new QWidget;
+    QtMaterialFlatButton * btn1=new QtMaterialFlatButton("确定");
+    QtMaterialFlatButton * btn2=new QtMaterialFlatButton("取消");
+    QHBoxLayout * buttonWidgetLayout=new QHBoxLayout();
+    buttonWidgetLayout->addWidget(btn1);
+    buttonWidgetLayout->addWidget(btn2);
+    buttonWidgetLayout->setSpacing(50);
+    buttonWidgetLayout->setAlignment(Qt::AlignCenter);
+    buttonWidget->setLayout(buttonWidgetLayout);
+
+    runningDialogLayout->addWidget(progress);
+    runningDialogLayout->addWidget(finishWidget);
+    runningDialogLayout->addWidget(tipLabel);
+    runningDialogLayout->addWidget(buttonWidget);
+
+    tipLabel->setAlignment(Qt::AlignCenter);
+    runningDialogLayout->addSpacing(8);
+    runningDialogLayout->setAlignment(Qt::AlignCenter);
+
+    runningDialog->setWindowLayout(runningDialogLayout);
+
+    btn1->setBackgroundColor(QColor(16,174,194));
+    btn1->setCornerRadius(8);
+    btn1->setOverlayColor(QColor(16,174,194));
+    btn1->setForegroundColor(QColor(16,174,194));
+
+    btn2->setBackgroundColor(QColor(194,31,48));
+    btn2->setCornerRadius(8);
+    btn2->setOverlayColor(QColor(194,31,48));
+    btn2->setForegroundColor(QColor(194,31,48));
+
+    buttonWidget->hide();
+    finishWidget->hide();
+
+    connect(btn1,&QtMaterialFlatButton::clicked,this,[=](){
+        runningDialog->hideDialog();
+//        stackWidget->setCurrentIndex(2);
+//        this->ribbonBar()->setCurrentIndex(3);
+    });
+    connect(btn2,&QtMaterialFlatButton::clicked,this,[=](){
+        runningDialog->hideDialog();
+    });
+    connect(solver_cable,&Solver_Cable::finished,this,[=](){
+        buttonWidget->show();
+        tipLabel->setText("Tips:计算结束，点击确定查看结果！");
+        finishWidget->show();
+        progress->hide();
+
+    });
+}
+
+bool MainWindow::isDirExist(QString fullPath)
+{
+
+
+    QDir dir(fullPath);
+    if(dir.exists())
+    {
+        return true;
+    }
+    else{
+        bool flag=dir.mkdir(fullPath);
+        return flag;
+    }
+
+}
+
+bool MainWindow::isFileExist(QString fullFileName)
+{
+    QFileInfo fileinfo(fullFileName);
+    if(fileinfo.isFile())
+    {
+        return true;
+    }
+    return false;
+}
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    solverThread->quit();
+    solverThread->wait();
 }
 
 

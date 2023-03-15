@@ -32,7 +32,7 @@ private:
     virtual void showEvent(QShowEvent*event)override;
     virtual bool eventFilter(QObject * obj,QEvent* event)override;
 signals:
-
+    void finshInitial(QWidget*);
 public slots:
 };
 

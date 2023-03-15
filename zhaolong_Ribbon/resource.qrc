@@ -26,5 +26,11 @@
         <file>icon/delete.svg</file>
         <file>icon/run.svg</file>
         <file>icon/Setting2.svg</file>
+        <file>icon/finish.svg</file>
+        <file>icon/color.svg</file>
+        <file>icon/rename-box.svg</file>
+        <file>icon/Control Cable.svg</file>
+        <file>picture/p.jpg</file>
+        <file>picture/p1.jpg</file>
     </qresource>
 </RCC>

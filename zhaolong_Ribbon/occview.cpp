@@ -146,6 +146,9 @@ OccView::OccView(QWidget *parent) :
     }
     setAttribute(Qt::WA_PaintOnScreen);
     setAttribute(Qt::WA_NoSystemBackground);
+    //
+    setWindowFlag(Qt::FramelessWindowHint);
+    //
     setBackgroundRole(QPalette::NoRole);
     setFocusPolicy(Qt::StrongFocus);
 
@@ -188,6 +191,7 @@ void OccView::paintEvent(QPaintEvent *event)
 //    m_view->Redraw();
 //   m_evtmgr->ProcessExpose();
     m_view->InvalidateImmediate();
+
     FlushViewEvents(m_context,m_view,true);
 }
 

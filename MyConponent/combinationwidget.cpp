@@ -65,6 +65,7 @@ CombinationWidget::CombinationWidget(QWidget *parent) : FrameLessWidget (20,0,pa
 //    widget3->setMouseTracking(true);
 //    sideBar->addPage(widget3);
 
+//    emit finshInitial(this);
 
 }
 

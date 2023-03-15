@@ -111,6 +111,7 @@ void HighSpeedCable::CaculateS_Parameters()
         {
             cascadeX.push_back(X.Get(1,i));
         }
+
         results=cascadeFixtureAndCable(fixturePath,s4PName+".s4p",cascadeX);
         emit caculateDone(results,paraName,"高速线缆带夹具");
 

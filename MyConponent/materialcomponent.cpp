@@ -50,6 +50,7 @@ MaterialComponent::MaterialComponent(QWidget *parent) : QWidget(parent)
    QVBoxLayout * loadingDialogLayout=new QVBoxLayout();
    QtMaterialCircularProgress *progress=new QtMaterialCircularProgress();
    QLabel * label=new QLabel("tips:Waiting for the result.");
+
    QWidget * buttonWidget =new QWidget;
    QtMaterialFlatButton * btn1=new QtMaterialFlatButton("确定");
    QtMaterialFlatButton * btn2=new QtMaterialFlatButton("取消");

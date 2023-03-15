@@ -26,7 +26,7 @@ SlidePage::SlidePage(int radius, QString name, QWidget *parent) :
     nameLabel->setGraphicsEffect(opacity);
 
     QString style;
-    style = "background-color:white;border-radius:" + QString::asprintf("%d", cornerRadius) + "px";
+    style = "background-color:white;border-top-right-radius:" + QString::asprintf("%d", cornerRadius) + "px;"+"border-bottom-right-radius:" + QString::asprintf("%d", cornerRadius) + "px;";
     bgWidget = new QWidget(this);
     bgWidget->lower();
     bgWidget->resize(this->size());

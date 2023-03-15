@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui axcontainer sql
+QT       += core gui axcontainer sql svg
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
@@ -35,7 +35,25 @@ SOURCES += \
     chartwidget.cpp \
     qcustomplot.cpp \
     ExcelBase.cpp \
-    parameterwidget.cpp
+    parameterwidget.cpp \
+    MyComponents/customScrollContainer.cpp \
+    MyComponents/customWidgets.cpp \
+    MyComponents/framelesswidget.cpp \
+    MyComponents/lineeditwidget.cpp \
+    MyComponents/myshadowwidget.cpp \
+    MyComponents/pagewidget.cpp \
+    MyComponents/pushbutton.cpp \
+    MyComponents/roundedcornerwidget.cpp \
+    MyComponents/sidebar.cpp \
+    MyComponents/slidepage.cpp \
+    MyComponents/slider.cpp \
+    infotext.cpp \
+    newcontentwidget.cpp \
+    settingwidget_highspeed.cpp \
+    settingwidget_base.cpp \
+    solver_cable.cpp \
+    slidewidget_info.cpp \
+    MyComponents/splash.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -47,7 +65,25 @@ HEADERS += \
     chartwidget.h \
     qcustomplot.h \
     ExcelBase.h \
-    parameterwidget.h
+    parameterwidget.h \
+    MyComponents/customScrollContainer.h \
+    MyComponents/customWidgets.h \
+    MyComponents/framelesswidget.h \
+    MyComponents/lineeditwidget.h \
+    MyComponents/myshadowwidget.h \
+    MyComponents/pagewidget.h \
+    MyComponents/pushbutton.h \
+    MyComponents/roundedcornerwidget.h \
+    MyComponents/sidebar.h \
+    MyComponents/slidepage.h \
+    MyComponents/slider.h \
+    infotext.h \
+    newcontentwidget.h \
+    settingwidget_highspeed.h \
+    settingwidget_base.h \
+    solver_cable.h \
+    slidewidget_info.h \
+    MyComponents/splash.h
 
 FORMS += \
     recordwidget.ui \

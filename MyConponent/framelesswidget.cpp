@@ -13,7 +13,7 @@ FrameLessWidget::FrameLessWidget(int cornerRadius, unsigned int attributes, QWid
     :  QWidget (parent),m_cornerRadius(cornerRadius),m_attributes((UiWindowAttributes)attributes)
 {
     setAttribute(Qt::WA_TranslucentBackground);
-    setWindowFlags(Qt::FramelessWindowHint );
+    setWindowFlags(Qt::FramelessWindowHint |Qt::WindowSystemMenuHint |Qt::WindowMinimizeButtonHint);
     setFocusPolicy(Qt::StrongFocus);
     setMouseTracking(true);
     setFocus();

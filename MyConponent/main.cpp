@@ -6,6 +6,9 @@
 #include <QDebug>
 #include <materialcomponent.h>
 #include <sliderpageexample.h>
+#include <comboboxtest.h>
+#include <setting_presentwidget.h>
+#include <splash.h>
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -40,9 +43,14 @@ int main(int argc, char *argv[])
     f.setFamily("微软雅黑");
     f.setPixelSize(13);
     a.setFont(f);
+qDebug()<<QApplication::applicationDirPath();
+qDebug()<<QDir::currentPath();
+    Splash  * w=new Splash;
+    w->show();
+    w->AddMessage("加载中》》》》");
+    CombinationWidget w2;
+    w->CloseSplash(&w2);
 
-    SliderPageExample w;
-    w.show();
 
     return a.exec();
 }

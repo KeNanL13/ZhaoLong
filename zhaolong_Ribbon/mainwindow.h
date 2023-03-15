@@ -16,6 +16,11 @@
 #include <qtmaterialflatbutton.h>
 
 
+#include <newcontentwidget.h>
+
+#include <QThread>
+#include <solver_cable.h>
+
 class MainWindow : public SARibbonMainWindow
 {
     Q_OBJECT
@@ -34,24 +39,42 @@ private:
     void OnRibbonTabChanged(int index);
     void onRecordRun(int type,QStringList parameters);
     void ProjectNameDialogSetup();
+    void runningDialogSetup();
+    bool isDirExist(QString);
+    bool isFileExist(QString);
 signals:
     void setProjectNameSig(QString ProJ_Name);
 
 private:
     SARibbonGalleryGroup * cableGroup;
     QStackedWidget * stackWidget;
-    contentWidget * mainWidget;
+    NewContentWidget * mainWidget;
     recordWidget * tableWidget;
     SARibbonContextCategory*contextcategory;
     ChartWidget *result=nullptr;
     Cable* cable=nullptr;
     int currentIndex;
+    //对话窗口
     QtMaterialDialog * dialog=nullptr;
+    QtMaterialDialog * runningDialog=nullptr;
+
+    //线缆线程与计算类
+    QThread * solverThread=nullptr;
+    Solver_Cable * solver_cable=nullptr;
+    bool runningFlag=false;
+
+
 
 
 
 signals:
+    void highSpeedSignal(QVector<double> parameters, QVector<QString> path);
     void resizeFinish();
+
+
+    // QWidget interface
+protected:
+    void closeEvent(QCloseEvent *event);
 };
 
 #endif // MAINWINDOW_H

@@ -104,6 +104,8 @@ void MyShadowWidget::setBorderWidgetLower(bool flag)
 void MyShadowWidget::showEvent(QShowEvent *event)
 {
     initialWidget();
+    qDebug()<<this->width();
+    qDebug()<<this->height();
 }
 
 void MyShadowWidget::resizeEvent(QResizeEvent *event)

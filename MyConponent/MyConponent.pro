@@ -43,7 +43,10 @@ SOURCES += \
     customScrollContainer.cpp \
     customWidgets.cpp \
     slidepage.cpp \
-    sliderpageexample.cpp
+    sliderpageexample.cpp \
+    comboboxtest.cpp \
+    setting_presentwidget.cpp \
+    splash.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -63,7 +66,10 @@ HEADERS += \
     customScrollContainer.h \
     customWidgets.h \
     slidepage.h \
-    sliderpageexample.h
+    sliderpageexample.h \
+    comboboxtest.h \
+    setting_presentwidget.h \
+    splash.h
 
 FORMS += \
         mainwindow.ui \
