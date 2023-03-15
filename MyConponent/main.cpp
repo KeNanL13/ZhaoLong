@@ -51,6 +51,11 @@ qDebug()<<QDir::currentPath();
     CombinationWidget w2;
     w->CloseSplash(&w2);
 
+<<<<<<< HEAD
+=======
+    CombinationWidget w;
+    w.show();
+>>>>>>> 8e70e4100d55354d29e99150ed2b391275e94ee6
 
     return a.exec();
 }

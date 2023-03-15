@@ -33,7 +33,11 @@ SliderPageExample::SliderPageExample(QWidget *parent) :
     textInputItem * material=new textInputItem("线缆长度");
     material->setValue("1.2361 (mm)");
 
+<<<<<<< HEAD
 //    //page 添加内容
+=======
+    //page 添加内容
+>>>>>>> 8e70e4100d55354d29e99150ed2b391275e94ee6
     page1->AddContent(material);
     page1->AddContent(depth);
     page1->AddContent(radius);
@@ -46,7 +50,13 @@ SliderPageExample::SliderPageExample(QWidget *parent) :
 //    QVBoxLayout * layout=new QVBoxLayout();
 //    QScrollArea * scroll=new QScrollArea;
 //    QWidget * contentWidget=new QWidget;
+<<<<<<< HEAD
 
+=======
+////    widget->setWidget(contentWidget);
+////    layout->addWidget(widget);
+////    slider->setDrawerLayout(layout);
+>>>>>>> 8e70e4100d55354d29e99150ed2b391275e94ee6
 
 //    QVBoxLayout * contentLayout=new QVBoxLayout;
 
@@ -86,7 +96,11 @@ SliderPageExample::SliderPageExample(QWidget *parent) :
 //    slider->setClickOutsideToClose(true);
 //    slider->setOverlayMode(true);
     connect(btn1,&QPushButton::clicked,this,[=](){
+<<<<<<< HEAD
         w->slideIn();
+=======
+        page1->slideIn();
+>>>>>>> 8e70e4100d55354d29e99150ed2b391275e94ee6
 //        slider->openDrawer();
     });
 
